@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IAS | INDEX</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @font-face {
+    font-family: myfont1;
+    src: url(./313/design/NeutralFace.otf);
+  }
+  @font-face{
+    font-family:myfont2;
+    src:url(./313/design/OpenSans-Regular.otf);
+  }
+  body {
+    font-family:myfont1,serif;
+    background-color:#f2f4f4;
+    color: #555;
+    padding: 16px;
+  }
+  br {
+    white-space:pre;
+    display: block;
+    font-size: 25%;
+    visibility:hidden;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  /* Create three equal columns that floats next to each other */
+  .column {
+    font-family:myfont2,serif;
+    float: left;
+    width: 32.33%;
+    margin: 2px 5px;
+    padding: 20px;
+    height: 200px; /* Should be removed. Only for demonstration */
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #foo {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+    text-align: center;
+  }
+</style>
+<body>
+<div id="foo"><p style="font-size: 14px;" id="@auth"></p></div>
+<div style="background-color:#d6dbdf;padding: 20px;">
+<span style="font-size: 40px;">Warehouse Rack Beam Location</span><br style="font-size: 3%;">
+<span>Inventory Assistance System</span></div>
+<hr>
+<h3>Storage Loc. DC Hero Cibitung</h3>
+<div class="row">
+  <div class="column" style="background-color:#fe9600;color:#fff;cursor:pointer;"
+       onmouseover="this.style.color='#555';this.style.backgroundColor='#f5b041'"
+       onmouseout="this.style.color='#fff';this.style.backgroundColor='#fe9600'"
+       onclick="grocery()">
+    <h2>DC 313</h2>
+    <h3>Conventional Groceries Cibitung</h3>
+  </div>
+  <div class="column" style="background-color:#2694f2;color:#fff;cursor:pointer;"
+       onmouseover="this.style.color='#555';this.style.backgroundColor='#5dade2'"
+       onmouseout="this.style.color='#fff';this.style.backgroundColor='#2694f2'"
+       onclick="fresh()">
+    <h2>DC 328</h2>
+    <h3>DC Fresh Cibitung Conventional</h3>
+  </div>
+  <div class="column" style="background-color:#049486;color:#fff;cursor:pointer;"
+       onmouseover="this.style.color='#555';this.style.backgroundColor='#48c9b0'"
+       onmouseout="this.style.color='#fff';this.style.backgroundColor='#049486'"
+       onclick="gms()">
+    <h2>DC 365</h2>
+    <h3>Conventional GMS Cibitung</h3>
+  </div>
+</div>
+</body>
+<script>
+  document.getElementById("@auth").innerHTML = window.atob("RGV2ZWxvcG1lbnQgYnkgQWJpbWFueXU=");
+  function grocery(){
+    window.open("./313/menu.html");
+    window.close();
+  }
+  function gms(){
+    window.open("./365/menu.html");
+    window.close();
+  }
+  function fresh(){
+    window.open("./328/menu.html");
+    window.close();
+  }
+  function code128(){
+    window.open("./code-128/menu.html");
+    window.close();
+  }
+</script>
+</html>

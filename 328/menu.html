@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAS | DC 328</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @font-face{
+	font-family:myfont1;
+	src:url(./design/NeutralFace.otf);
+	}
+    body {
+	font-family:myfont1;
+	background-color:#f2f4f4;
+	color: #555;
+	}
+    br {
+	white-space:pre;
+	display: block;
+	font-size: 25%;
+	visibility:hidden;
+	}
+    #foo {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="./design/style.css">
+<div id="foo"><p style="font-size: 14px;" id="@auth"></p></div>
+<body onload="navigate()">
+<!-- elemen halaman utama -->
+<div id="main"><div class="noprint">
+    <div style="background-color:#2694f2;padding: 20px;color:#fff;"><span style="font-size: 40px;">Warehouse Rack Beam Location (328)</span><br style="font-size: 3%;">
+        <span>Inventory Assistance System</span></div>
+<hr>
+<h3 style="cursor:pointer;" onmouseover="this.style.color='#4b77be'"
+  onmouseout="this.style.color='#555'"
+  onclick="opennav()">&#8637 Click here to Menu</h3></div>
+<!-- tampilkan iframe -->
+<iframe style="border:none;width:100%;height:500px" id="@iframe"></iframe>
+</div>
+</body>
+<script src="./design/function.js"></script>
+</html>
